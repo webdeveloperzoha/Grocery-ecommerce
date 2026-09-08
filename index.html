@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zgrocery — Organic & Fresh Food Store</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- FontAwesome 6 Free -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Swiper.js CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ================= TOP BAR ================= -->
+  <aside class="top-bar py-2 d-none d-lg-block">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="top-bar-left d-flex gap-4">
+          <span><i class="fa-solid fa-phone me-2 text-accent-yellow"></i> +92 (307) 68 - 06860</span>
+          <span><i class="fa-solid fa-envelope me-2 text-accent-yellow"></i> needhelp@company.com</span>
+        </div>
+        <div class="top-bar-right d-flex align-items-center gap-3">
+          <span class="text-muted small">Follow Us:</span>
+          <a href="#" class="top-social"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="top-social"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="top-social"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="top-social"><i class="fa-brands fa-pinterest-p"></i></a>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ================= HEADER / NAVBAR ================= -->
+  <header id="site-header" class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <span class="logo-leaf"><i class="fa-solid fa-leaf"></i></span>
+          <span class="logo-text">z<span>grocery</span></span>
+        </a>
+
+        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars-staggered fs-3"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="#">Home 01 - Farm</a></li>
+                <li><a class="dropdown-item" href="#">Home 02 - Supermarket</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+            <button class="btn icon-btn" aria-label="Search" data-bs-toggle="modal" data-bs-target="#searchModal">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a href="#" class="btn icon-btn" aria-label="Account">
+              <i class="fa-regular fa-user"></i>
+            </a>
+            <a href="#cart" class="btn icon-btn position-relative" aria-label="Cart">
+              <i class="fa-solid fa-basket-shopping"></i>
+              <span id="cart-counter" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark">0</span>
+            </a>
+            <a href="#products" class="btn btn-primary-yellow rounded-pill px-4 ms-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section position-relative overflow-hidden">
+      <!-- Floating decorative elements -->
+      <span class="floating-item float-item-1"><i class="fa-solid fa-leaf text-success opacity-25"></i></span>
+      <span class="floating-item float-item-2"><i class="fa-solid fa-lemon text-warning opacity-25"></i></span>
+      <span class="floating-item float-item-3"><i class="fa-solid fa-pepper-hot text-danger opacity-25"></i></span>
+
+      <div class="container position-relative z-1 py-5">
+        <div class="row align-items-center min-vh-75 py-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="badge-pill mb-3">
+              <i class="fa-solid fa-seedling me-1"></i> NATURAL ORGANIC FARM
+            </div>
+            <h1 class="hero-title text-white mb-4">Choose the <br /><span class="serif-title">healthy food.</span></h1>
+            <p class="hero-desc text-muted mb-4 lead">
+              Feed your family with our 100% certified organic vegetables, grown sustainably without harmful chemicals or GMOs.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="#products" class="btn btn-primary-yellow rounded-pill px-4 py-3">Shop Now <i class="fa-solid fa-arrow-right ms-2"></i></a>
+              <a href="#about" class="btn btn-outline-white rounded-pill px-4 py-3">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0 text-center" data-aos="zoom-in">
+          <!-- 3D Perspective Wrapper -->
+          <div class="hero-3d-scene" id="heroScene">
+            <!-- Multi-layered Ambient Light & Rings -->
+            <div class="glow-orb glow-green"></div>
+            <div class="glow-orb glow-yellow"></div>
+            <div class="animated-ring"></div>
+
+            <!-- 3D Tilt Card Container -->
+            <div class="hero-3d-card" id="heroCard">
+              <!-- Organic Shape Mask with Shadow & Gloss Flare -->
+              <div class="image-mask-container">
+                <img 
+                  src="https://images.unsplash.com/photo-1610348725531-843dff563e2c?auto=format&fit=crop&w=800&q=80" 
+                  alt="Fresh Organic Vegetables" 
+                  class="hero-organic-img"
+                  id="heroOrganicImg"
+                />
+                <!-- 3D Specular Reflection Overlay -->
+                <div class="glare-effect"></div>
+              </div>
+
+              <!-- Pop-out 3D Badges (Parallax Layers) -->
+              <div class="floating-badge badge-top-right">
+                <span class="badge-icon"><i class="fa-solid fa-certificate"></i></span>
+                <div class="badge-content">
+                  <strong>100% Organic</strong>
+                  <small>Certified Farm</small>
+                </div>
+              </div>
+
+              <div class="floating-badge badge-bottom-left">
+                <span class="badge-icon star-icon"><i class="fa-solid fa-star"></i></span>
+                <div class="badge-content">
+                  <strong>Top Quality</strong>
+                  <small>Picked Today</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= VALUE STRIP ================= -->
+    <section class="features-ribbon border-top border-bottom border-light-subtle py-4">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-6 col-md-3 d-flex align-items-center gap-3">
+            <div class="feature-icon"><i class="fa-solid fa-rotate-left"></i></div>
+            <div>
+              <h6 class="mb-0 text-white">Return Policy</h6>
+              <p class="mb-0 text-muted small">Money back guarantee</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 d-flex align-items-center gap-3">
+            <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+            <div>
+              <h6 class="mb-0 text-white">Free Shipping</h6>
+              <p class="mb-0 text-muted small">On orders over $60.00</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 d-flex align-items-center gap-3">
+            <div class="feature-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <h6 class="mb-0 text-white">Store Locator</h6>
+              <p class="mb-0 text-muted small">Find your nearest store</p>
+            </div>
+          </div>
+          <div class="col-6 col-md-3 d-flex align-items-center gap-3">
+            <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div>
+              <h6 class="mb-0 text-white">Secure Payment</h6>
+              <p class="mb-0 text-muted small">100% secure checkout</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="about-section py-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 position-relative" data-aos="fade-up-right">
+            <div class="image-wrapper position-relative">
+              <img src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=700&q=80" alt="Organic Farmer" class="img-fluid rounded-4 shadow" />
+              <div class="experience-badge">
+                <span class="fs-2 fw-bold text-white">30+</span>
+                <span class="small text-uppercase">Years Experience</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up-left">
+            <span class="section-tag">WHO WE ARE</span>
+            <h2 class="section-heading text-white mt-2 mb-4">Organic & healthy fresh food provider</h2>
+            <p class="text-muted mb-4">
+              We cultivate nature’s finest produce across sustainable family-run farmland, delivering nutrition, natural flavor, and purity directly to your table every single morning.
+            </p>
+            <div class="row g-3 mb-4">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-green fs-5"></i>
+                  <span class="text-white fw-medium">100% Natural Products</span>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-accent-green fs-5"></i>
+                  <span class="text-white fw-medium">Fresh Farm Vegetables</span>
+                </div>
+              </div>
+            </div>
+            <div class="p-3 highlight-box rounded-3 border-start border-4 border-warning">
+              <p class="mb-0 text-white small">
+                "Our harvest reaches your doorstep within 12 hours from picking, locking in optimal nutrients and freshness."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= OFFERINGS / PROMOS ================= -->
+    <section id="categories" class="py-5 bg-dark-secondary">
+      <div class="container py-4">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-tag">WHAT WE'RE OFFERING</span>
+          <h2 class="section-heading text-white">Categories of Goodness</h2>
+        </div>
+
+        <!-- Category Circles (All Equal Dimensions) -->
+        <div class="row g-4 justify-content-center text-center mb-5">
+          <!-- 1. Vegetables -->
+          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="category-card p-2">
+              <div class="cat-img-box mb-3 mx-auto">
+                <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=400&q=80" alt="Vegetables" />
+              </div>
+              <h5 class="text-white mb-1">Vegetables</h5>
+              <span class="text-muted small">24+ Products</span>
+            </div>
+          </div>
+
+          <!-- 2. Fresh Fruits -->
+          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="category-card p-2">
+              <div class="cat-img-box mb-3 mx-auto">
+                <img src="https://images.unsplash.com/photo-1619566636858-adf3ef46400b?auto=format&fit=crop&w=400&q=80" alt="Fresh Fruits" />
+              </div>
+              <h5 class="text-white mb-1">Fresh Fruits</h5>
+              <span class="text-muted small">18+ Products</span>
+            </div>
+          </div>
+
+          <!-- 3. Pure Spices -->
+          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="category-card p-2">
+              <div class="cat-img-box mb-3 mx-auto">
+                <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=400&q=80" alt="Pure Spices" />
+              </div>
+              <h5 class="text-white mb-1">Pure Spices</h5>
+              <span class="text-muted small">12+ Products</span>
+            </div>
+          </div>
+
+          <!-- 4. Dried Items -->
+          <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="category-card p-2">
+              <div class="cat-img-box mb-3 mx-auto">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" alt="Dried Items" />
+              </div>
+              <h5 class="text-white mb-1">Dried Items</h5>
+              <span class="text-muted small">15+ Products</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 Promos -->
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="fade-right">
+            <div class="promo-banner p-5 rounded-4 position-relative overflow-hidden" style="background: linear-gradient(rgba(14, 39, 22, 0.75), rgba(14, 39, 22, 0.75)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80') center/cover;">
+              <span class="badge bg-warning text-dark mb-3">Save 20% Off</span>
+              <h3 class="text-white mb-3">Quality organic food store</h3>
+              <a href="#products" class="btn btn-outline-white rounded-pill px-4">Shop Collection</a>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="fade-left">
+            <div class="promo-banner p-5 rounded-4 position-relative overflow-hidden" style="background: linear-gradient(rgba(14, 39, 22, 0.75), rgba(14, 39, 22, 0.75)), url('https://images.unsplash.com/photo-1506617420156-8e4536971650?auto=format&fit=crop&w=600&q=80') center/cover;">
+              <span class="badge bg-success mb-3">100% Fresh Daily</span>
+              <h3 class="text-white mb-3">Healthy products everyday</h3>
+              <a href="#products" class="btn btn-primary-yellow rounded-pill px-4">Discover Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRODUCTS SECTION ================= -->
+    <section id="products" class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-tag">FRESH HARVEST</span>
+          <h2 class="section-heading text-white">Today's new hottest products available now</h2>
+        </div>
+
+        <div class="swiper productSwiper pb-5" data-aos="fade-up">
+          <div class="swiper-wrapper">
+            <!-- Product 1 -->
+            <div class="swiper-slide">
+              <div class="product-card text-center p-4 rounded-4 bg-white shadow-sm">
+                <div class="product-thumb mb-3 position-relative">
+                  <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=400&q=80" alt="Organic Bananas" class="img-fluid rounded-3" />
+                </div>
+                <div class="rating text-warning small mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h5 class="product-title mb-1 text-dark">Fresh Bananas</h5>
+                <p class="product-price fw-bold text-success mb-3">$18.00 <span class="text-muted fw-normal small">/ kg</span></p>
+                <button class="btn btn-outline-success w-100 rounded-pill add-to-cart-btn" data-id="1" data-name="Fresh Bananas" data-price="18.00">
+                  <i class="fa-solid fa-cart-plus me-1"></i> Add To Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="swiper-slide">
+              <div class="product-card text-center p-4 rounded-4 bg-white shadow-sm">
+                <div class="product-thumb mb-3 position-relative">
+                  <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=400&q=80" alt="Potatoes" class="img-fluid rounded-3" />
+                </div>
+                <div class="rating text-warning small mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h5 class="product-title mb-1 text-dark">Farm Potatoes</h5>
+                <p class="product-price fw-bold text-success mb-3">$12.00 <span class="text-muted fw-normal small">/ kg</span></p>
+                <button class="btn btn-outline-success w-100 rounded-pill add-to-cart-btn" data-id="2" data-name="Farm Potatoes" data-price="12.00">
+                  <i class="fa-solid fa-cart-plus me-1"></i> Add To Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="swiper-slide">
+              <div class="product-card text-center p-4 rounded-4 bg-white shadow-sm">
+                <div class="product-thumb mb-3 position-relative">
+                  <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=400&q=80" alt="Tomatoes" class="img-fluid rounded-3" />
+                </div>
+                <div class="rating text-warning small mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h5 class="product-title mb-1 text-dark">Red Tomatoes</h5>
+                <p class="product-price fw-bold text-success mb-3">$23.00 <span class="text-muted fw-normal small">/ kg</span></p>
+                <button class="btn btn-outline-success w-100 rounded-pill add-to-cart-btn" data-id="3" data-name="Red Tomatoes" data-price="23.00">
+                  <i class="fa-solid fa-cart-plus me-1"></i> Add To Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="swiper-slide">
+              <div class="product-card text-center p-4 rounded-4 bg-white shadow-sm">
+                <div class="product-thumb mb-3 position-relative">
+                  <img src="https://images.unsplash.com/photo-1556801712-76c8eb07bbc9?auto=format&fit=crop&w=400&q=80" alt="Lettuce" class="img-fluid rounded-3" />
+                </div>
+                <div class="rating text-warning small mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h5 class="product-title mb-1 text-dark">Crisp Lettuce</h5>
+                <p class="product-price fw-bold text-success mb-3">$10.00 <span class="text-muted fw-normal small">/ piece</span></p>
+                <button class="btn btn-outline-success w-100 rounded-pill add-to-cart-btn" data-id="4" data-name="Crisp Lettuce" data-price="10.00">
+                  <i class="fa-solid fa-cart-plus me-1"></i> Add To Cart
+                </button>
+              </div>
+            </div>
+
+            <!-- Product 5 -->
+            <!-- Product 5: Sweet Potatoes (Fixed Image Link) -->
+            <div class="swiper-slide">
+              <div class="product-card text-center p-4 rounded-4 bg-white shadow-sm h-100 d-flex flex-column justify-content-between">
+                <div class="product-thumb mb-3 position-relative">
+                  <img 
+                    src="https://images.unsplash.com/photo-1590165482129-1b8b27698780?auto=format&fit=crop&w=500&q=80" 
+                    alt="Organic Sweet Potatoes" 
+                    class="img-fluid rounded-3" 
+                    loading="lazy"
+                  />
+                </div>
+                <div class="rating text-warning small mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <h5 class="product-title mb-1 text-dark">Sweet Potatoes</h5>
+                <p class="product-price fw-bold text-success mb-3">$15.00 <span class="text-muted fw-normal small">/ kg</span></p>
+                <button class="btn btn-outline-success w-100 rounded-pill add-to-cart-btn" data-id="5" data-name="Sweet Potatoes" data-price="15.00">
+                  <i class="fa-solid fa-cart-plus me-1"></i> Add To Cart
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Swiper Controls -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= WHY CHOOSE US (DIAMOND GRID) ================= -->
+    <section class="py-5 bg-dark-secondary">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <span class="section-tag">WHY CHOOSE US</span>
+            <h2 class="section-heading text-white mb-4">Few reasons for people choosing Ogenix</h2>
+            
+            <div class="row g-4 mt-2">
+              <div class="col-sm-6">
+                <div class="feature-box d-flex gap-3">
+                  <div class="feature-circle-icon"><i class="fa-solid fa-apple-whole"></i></div>
+                  <div>
+                    <h6 class="text-white mb-1">Organic Products</h6>
+                    <p class="text-muted small mb-0">100% Natural certified standards</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-box d-flex gap-3">
+                  <div class="feature-circle-icon"><i class="fa-solid fa-truck-pickup"></i></div>
+                  <div>
+                    <h6 class="text-white mb-1">Daily Fresh</h6>
+                    <p class="text-muted small mb-0">Gathered fresh every daybreak</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-box d-flex gap-3">
+                  <div class="feature-circle-icon"><i class="fa-solid fa-leaf"></i></div>
+                  <div>
+                    <h6 class="text-white mb-1">Organic Fruit</h6>
+                    <p class="text-muted small mb-0">Naturally sun-ripened crops</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="feature-box d-flex gap-3">
+                  <div class="feature-circle-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                  <div>
+                    <h6 class="text-white mb-1">Natural Items</h6>
+                    <p class="text-muted small mb-0">No synthetic pesticides</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Diamond Geometric Shapes -->
+          <div class="col-lg-6" data-aos="zoom-in">
+            <div class="diamond-grid-container position-relative">
+              <div class="diamond-shape shape-1">
+                <img src="https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=400&q=80" alt="Vineyard Field" />
+              </div>
+              <div class="diamond-shape shape-2">
+                <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=400&q=80" alt="Farmer Working" />
+              </div>
+              <div class="diamond-accent-box"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FARMERS TEAM ================= -->
+    <section class="team-section py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-tag">OUR EXPERTS</span>
+          <h2 class="section-heading text-white">Awesome farmers team here to help you</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Member 1 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-card text-center position-relative">
+              <div class="arched-frame mb-3 position-relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Johnathan Bell" class="img-fluid" />
+                <div class="team-social-overlay">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+              <div class="fruit-slice-accent">🍊</div>
+              <h5 class="text-white mb-0">Johnathan Bell</h5>
+              <span class="text-accent-green small">Senior Crop Specialist</span>
+            </div>
+          </div>
+
+          <!-- Member 2 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="team-card text-center position-relative">
+              <div class="arched-frame mb-3 position-relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Alina Danvers" class="img-fluid" />
+                <div class="team-social-overlay">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+              <div class="fruit-slice-accent">🍋</div>
+              <h5 class="text-white mb-0">Alina Danvers</h5>
+              <span class="text-accent-green small">Soil & Nutrition Botanist</span>
+            </div>
+          </div>
+
+          <!-- Member 3 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="team-card text-center position-relative">
+              <div class="arched-frame mb-3 position-relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Mike Hardson" class="img-fluid" />
+                <div class="team-social-overlay">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+              </div>
+              <div class="fruit-slice-accent">🍊</div>
+              <h5 class="text-white mb-0">Mike Hardson</h5>
+              <span class="text-accent-green small">Head Farm Manager</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TESTIMONIALS ================= -->
+    <section class="testimonials-section py-5 bg-dark-secondary">
+      <div class="container py-4">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5" data-aos="fade-right">
+            <span class="section-tag">WHAT THEY SAY</span>
+            <h2 class="section-heading text-white mb-4">What they're talking about our company?</h2>
+            <a href="#products" class="btn btn-primary-yellow rounded-pill px-4">All Testimonials</a>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left">
+            <div class="testimonial-card p-4 p-md-5 rounded-4 position-relative">
+              <i class="fa-solid fa-quote-right quote-watermark"></i>
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&h=120&q=80" alt="Sarah Jenkins" class="rounded-circle test-avatar" />
+                <div>
+                  <h5 class="text-white mb-0">Sarah Jenkins</h5>
+                  <span class="text-accent-green small">Verified Buyer</span>
+                  <div class="rating text-warning small mt-1">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-muted fst-italic lead mb-0">
+                "The freshness of their leafy greens and seasonal tomatoes surpasses anything I can find in our city supermarkets. Delivery is always prompt, and knowing it's 100% organic provides complete peace of mind."
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GALLERY / INSTAGRAM ================= -->
+    <!-- ================= GALLERY / INSTAGRAM STREAM ================= -->
+    <section class="gallery-stream py-5">
+      <div class="container-fluid px-3 px-lg-5">
+        <div class="row g-3 g-md-4">
+          <!-- Item 1 -->
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://instagram.com" target="_blank" class="gallery-thumb d-block">
+              <img 
+                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" 
+                alt="Organic Salad Plate" 
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+            <a href="https://instagram.com" target="_blank" class="gallery-thumb d-block">
+              <img 
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" 
+                alt="Healthy Harvest Bowl" 
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+            <a href="https://instagram.com" target="_blank" class="gallery-thumb d-block">
+              <img 
+                src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?auto=format&fit=crop&w=600&q=80" 
+                alt="Fresh Market Shelves" 
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="400">
+            <a href="https://instagram.com" target="_blank" class="gallery-thumb d-block">
+              <img 
+                src="https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80" 
+                alt="Green Grocery Display" 
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= BLOG / NEWS ================= -->
+    <section id="blog" class="py-5 bg-dark-secondary">
+      <div class="container py-4">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <span class="section-tag">FROM THE BLOG</span>
+          <h2 class="section-heading text-white">Latest news updates & articles</h2>
+        </div>
+
+        <div class="row g-4">
+          <!-- Article 1 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="blog-card bg-dark-primary rounded-4 overflow-hidden shadow-sm h-100 d-flex flex-column">
+              <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=500&q=80" alt="Healthy eating" class="img-fluid" />
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="meta text-muted small mb-2">
+                  <span><i class="fa-regular fa-calendar me-1"></i> Sep 08, 2026</span>
+                  <span class="ms-3"><i class="fa-regular fa-user me-1"></i> Admin</span>
+                </div>
+                <h5 class="text-white mb-3">Which healthy food growth strategies are required</h5>
+                <p class="text-muted small mb-4 flex-grow-1">Learn how natural permaculture restores essential micro-nutrients back into topsoil...</p>
+                <a href="#" class="read-more-link text-accent-green fw-bold">Read More <i class="fa-solid fa-arrow-right-long ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="blog-card bg-dark-primary rounded-4 overflow-hidden shadow-sm h-100 d-flex flex-column">
+              <img src="https://images.unsplash.com/photo-1509358271058-acd22cc93898?auto=format&fit=crop&w=500&q=80" alt="Fresh apples harvest" class="img-fluid" />
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="meta text-muted small mb-2">
+                  <span><i class="fa-regular fa-calendar me-1"></i> Sep 06, 2026</span>
+                  <span class="ms-3"><i class="fa-regular fa-user me-1"></i> Admin</span>
+                </div>
+                <h5 class="text-white mb-3">How to store freshly harvested apples for months</h5>
+                <p class="text-muted small mb-4 flex-grow-1">Simple rustic cellar tips to maintain optimal fruit crispness without preservative chemicals...</p>
+                <a href="#" class="read-more-link text-accent-green fw-bold">Read More <i class="fa-solid fa-arrow-right-long ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="blog-card bg-dark-primary rounded-4 overflow-hidden shadow-sm h-100 d-flex flex-column">
+              <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=500&q=80" alt="Vegetables preparation" class="img-fluid" />
+              <div class="p-4 d-flex flex-column flex-grow-1">
+                <div class="meta text-muted small mb-2">
+                  <span><i class="fa-regular fa-calendar me-1"></i> Sep 02, 2026</span>
+                  <span class="ms-3"><i class="fa-regular fa-user me-1"></i> Admin</span>
+                </div>
+                <h5 class="text-white mb-3">Nutritious plant diets for high energy and focus</h5>
+                <p class="text-muted small mb-4 flex-grow-1">Essential mineral balance achieved through raw root vegetables and cruciferous leaves...</p>
+                <a href="#" class="read-more-link text-accent-green fw-bold">Read More <i class="fa-solid fa-arrow-right-long ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= NEWSLETTER STRIP ================= -->
+    <section class="newsletter-section py-4 position-relative">
+      <div class="container">
+        <div class="newsletter-card rounded-5 p-4 p-md-5 d-flex flex-column flex-lg-row align-items-center justify-content-between gap-4 position-relative overflow-hidden">
+          <div class="d-flex align-items-center gap-3">
+            <span class="news-icon fs-1 text-white"><i class="fa-solid fa-envelope-open-text"></i></span>
+            <div>
+              <h3 class="text-white mb-1">Subscribe to newsletter</h3>
+              <p class="text-white-50 mb-0 small">Get updates on flash sales, new harvests, and farming insights.</p>
+            </div>
+          </div>
+
+          <form id="newsletter-form" class="d-flex w-100 max-w-500 gap-2">
+            <input type="email" class="form-control rounded-pill px-4 py-2 border-0" placeholder="Your Email Address..." required />
+            <button type="submit" class="btn btn-primary-yellow rounded-pill px-4 fw-bold">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer id="contact" class="footer pt-5 border-top border-dark-subtle">
+    <div class="container py-5">
+      <div class="row g-4">
+        <!-- Col 1 -->
+        <div class="col-lg-3 col-md-6">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+            <span class="logo-leaf"><i class="fa-solid fa-leaf"></i></span>
+            <span class="logo-text">z<span>grocery</span></span>
+          </a>
+          <p class="text-muted small mb-4">
+            Supplying uncompromised, clean organic harvest direct from sustainable farms since 1996.
+          </p>
+          <div class="d-flex gap-2">
+            <a href="#" class="footer-social"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-social"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="footer-social"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-social"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="text-white mb-4">Explore</h6>
+          <ul class="list-unstyled footer-links small">
+            <li><a href="#about">About Company</a></li>
+            <li><a href="#categories">Our Services</a></li>
+            <li><a href="#products">Become a Seller</a></li>
+            <li><a href="#products">New Products</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="text-white mb-4">Legal & Support</h6>
+          <ul class="list-unstyled footer-links small">
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Shipping Rates</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="col-lg-3 col-md-6">
+          <h6 class="text-white mb-4">Contact Info</h6>
+          <ul class="list-unstyled text-muted small mb-3">
+            <li class="mb-2"><i class="fa-solid fa-location-dot me-2 text-accent-green"></i> 124 Farm Meadow Way, California, USA</li>
+            <li class="mb-2"><i class="fa-solid fa-phone me-2 text-accent-green"></i> +92 (307) 68 - 06860</li>
+            <li class="mb-2"><i class="fa-solid fa-envelope me-2 text-accent-green"></i> needhelp@company.com</li>
+          </ul>
+          <!-- <div class="row g-1 pt-1 w-75">
+            <div class="col-4"><img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=100&q=80" class="img-fluid rounded" alt="Thumb" /></div>
+            <div class="col-4"><img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=100&q=80" class="img-fluid rounded" alt="Thumb" /></div>
+            <div class="col-4"><img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?auto=format&fit=crop&w=100&q=80" class="img-fluid rounded" alt="Thumb" /></div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="border-top border-dark-subtle py-3 text-center">
+      <p class="mb-0 text-muted small">&copy; 2026 zgrocery. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Search Modal -->
+  <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark-primary border border-secondary text-white p-3">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Search Our Fresh Store</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search tomatoes, fruits, organic honey..." />
+            <button class="btn btn-primary-yellow">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CDN Dependencies -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order Fresh Groceries — zgrocery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <aside class="top-bar py-2 d-none d-lg-block">
+    <div class="container d-flex justify-content-between">
+      <div><i class="fa-solid fa-phone me-2 text-accent-yellow"></i> +92 (307) 68 - 06860 | <i class="fa-solid fa-envelope ms-3 me-2 text-accent-yellow"></i> orders@zgrocery.com</div>
+      <div>Follow: <i class="fa-brands fa-facebook ms-2"></i> <i class="fa-brands fa-instagram ms-2"></i></div>
+    </div>
+  </aside>
+
+  <!-- Navbar -->
+  <header id="site-header" class="site-header sticky-top">
+    <nav class="navbar navbar-expand-lg py-3">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <span class="logo-leaf"><i class="fa-solid fa-leaf"></i></span>
+          <span class="logo-text">z<span>grocery</span></span>
+        </a>
+        <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+          <i class="fa-solid fa-bars-staggered fs-3"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="pages.html">Pages</a></li>
+            <li class="nav-item"><a class="nav-link" href="shop.html">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+          <a href="order.html" class="btn btn-primary-yellow rounded-pill px-4 active">Order Now</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumb Banner -->
+  <div class="page-hero text-center">
+    <div class="container" data-aos="fade-up">
+      <span class="section-tag">EXPRESS FARM-TO-DOOR</span>
+      <h1 class="text-white section-heading mt-2">Place Your Order</h1>
+      <p class="text-muted mb-0">Home / <span class="text-white">Order Checkout</span></p>
+    </div>
+  </div>
+
+  <!-- Main Order Form Section -->
+  <section class="py-5">
+    <div class="container py-4">
+      <div class="row g-5">
+        <!-- Order Form -->
+        <div class="col-lg-8" data-aos="fade-right">
+          <div class="bg-dark-secondary p-4 p-md-5 rounded-4 shadow-sm border border-secondary border-opacity-25">
+            <h3 class="text-white mb-4"><i class="fa-solid fa-basket-shopping text-accent-green me-2"></i> Delivery & Customer Details</h3>
+            
+            <form id="checkoutOrderForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Full Name *</label>
+                  <input type="text" class="form-control rounded-3" placeholder="e.g. Alex Morgan" required />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-muted small">Phone Number *</label>
+                  <input type="tel" class="form-control rounded-3" placeholder="+1 (555) 000-0000" required />
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label text-muted small">Email Address *</label>
+                  <input type="email" class="form-control rounded-3" placeholder="name@domain.com" required />
+                </div>
+                <div class="col-md-8">
+                  <label class="form-label text-muted small">Delivery Street Address *</label>
+                  <input type="text" class="form-control rounded-3" placeholder="Flat / House No / Road / Area" required />
+                </div>
+                <div class="col-md-4">
+                  <label class="form-label text-muted small">City / Zone *</label>
+                  <input type="text" class="form-control rounded-3" placeholder="City" required />
+                </div>
+
+                <!-- Product Picker -->
+                <div class="col-md-8 mt-4">
+                  <label class="form-label text-muted small">Select Primary Harvest Item *</label>
+                  <select class="form-select rounded-3" id="orderItemSelect" required>
+                    <option value="" selected disabled>Choose fresh food item...</option>
+                    <option value="Fresh Bananas">Fresh Bananas ($18.00 / kg)</option>
+                    <option value="Farm Potatoes">Farm Potatoes ($12.00 / kg)</option>
+                    <option value="Red Tomatoes">Red Tomatoes ($23.00 / kg)</option>
+                    <option value="Crisp Lettuce">Crisp Lettuce ($10.00 / piece)</option>
+                    <option value="Sweet Potatoes">Sweet Potatoes ($15.00 / kg)</option>
+                    <option value="Organic Avocados">Organic Avocados ($28.00 / pack)</option>
+                    <option value="Raw Forest Honey">Raw Forest Honey ($35.00 / jar)</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mt-4">
+                  <label class="form-label text-muted small">Quantity *</label>
+                  <input type="number" class="form-control rounded-3" min="1" max="50" value="1" required />
+                </div>
+
+                <!-- Payment Method -->
+                <div class="col-12 mt-4">
+                  <label class="form-label text-muted small d-block mb-2">Payment Preference</label>
+                  <div class="d-flex flex-wrap gap-4">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="paymentOption" id="cod" checked />
+                      <label class="form-check-label text-white" for="cod"><i class="fa-solid fa-hand-holding-dollar text-accent-yellow me-1"></i> Cash on Delivery</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="paymentOption" id="card" />
+                      <label class="form-check-label text-white" for="card"><i class="fa-regular fa-credit-card text-accent-green me-1"></i> Card / Digital Wallet</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 mt-3">
+                  <label class="form-label text-muted small">Special Harvest / Delivery Notes</label>
+                  <textarea class="form-control rounded-3" rows="3" placeholder="Leave at doorstep, morning delivery preferred, etc."></textarea>
+                </div>
+
+                <div class="col-12 mt-4">
+                  <button type="submit" class="btn btn-primary-yellow w-100 py-3 rounded-pill fw-bold fs-5">
+                    <i class="fa-solid fa-lock me-2"></i> Confirm & Complete Order
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Summary Sidebar -->
+        <div class="col-lg-4" data-aos="fade-left">
+          <div class="bg-dark-secondary p-4 rounded-4 border border-secondary border-opacity-25 mb-4">
+            <h5 class="text-white mb-3">Order Guarantee</h5>
+            <ul class="list-unstyled text-muted small">
+              <li class="mb-2"><i class="fa-solid fa-circle-check text-accent-green me-2"></i> 100% Organically Farmed</li>
+              <li class="mb-2"><i class="fa-solid fa-truck text-accent-green me-2"></i> Dispatched inside 12 hours</li>
+              <li class="mb-2"><i class="fa-solid fa-shield text-accent-green me-2"></i> Money Back Guarantee if Damaged</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-4 border border-success border-opacity-25 text-center bg-dark-primary">
+            <i class="fa-solid fa-headset fs-1 text-accent-yellow mb-3"></i>
+            <h5 class="text-white">Need Fast Assistance?</h5>
+            <p class="text-muted small">Call directly for express roadside pickup or bulk commercial orders.</p>
+            <a href="tel:+923076806860" class="btn btn-outline-white rounded-pill px-4">+92 (307) 68 - 06860</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Confirmation Modal -->
+  <div class="modal fade" id="orderConfirmationModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content bg-dark-secondary text-white text-center p-4 border border-success">
+        <div class="modal-body">
+          <i class="fa-solid fa-circle-check text-accent-green display-3 mb-3"></i>
+          <h3 class="text-white">Order Received!</h3>
+          <p class="text-muted">Thank you for supporting sustainable farmers. Your order reference is <strong class="text-accent-yellow" id="orderReceiptRef"></strong>.</p>
+          <button type="button" class="btn btn-primary-yellow rounded-pill px-4" data-bs-dismiss="modal" onclick="window.location.href='shop.html'">Continue Shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer pt-5 border-top border-dark-subtle">
+    <div class="container text-center py-4">
+      <p class="mb-0 text-muted small">&copy; 2026 zgrocery. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
